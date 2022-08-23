@@ -1,0 +1,23 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/ClassLibrary1/obj
+/Dominio/obj
+/Provider/bin/Debug/netcoreapp2.1
+/Dominio/Provider/Models/Response.cs
+/Repository/obj
+/Sigga/Sigga.Android/bin
+/Sigga/Sigga.Android/obj/Debug/110
+/Sigga/Sigga.Android/obj/Release/110
+/Sigga/Sigga.iOS/bin/iPhone/Debug
+/Sigga/Sigga.iOS/obj
+/Teste/bin/Debug/netcoreapp2.1
+/Teste/obj
+/ClassLibrary1/bin/Debug/netstandard2.0
+/ClassLibrary1/bin/Release/netstandard2.0
+/Dominio/bin/Debug/netcoreapp2.1
+/Provider/obj
+/Repository/bin/Debug/netcoreapp2.1
+/Sigga/Sigga/obj/Release/netstandard2.0
+/Sigga/Sigga/obj/Debug/netstandard2.0

@@ -25,7 +25,7 @@
                                             <Label Text="{Binding NomeUsuario}" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"></Label>
                                         </StackLayout>
                                         <StackLayout Grid.Column="1" VerticalOptions="Start">
-                                            <Label x:Name="Titulo" Text="{Binding TituloReduzido}" VerticalOptions="Start" Style="{StaticResource FonteTituloPadrao}"></Label>
+                                            <Label x:Name="Titulo" Text="{Binding Titulo}" VerticalOptions="Start" Style="{StaticResource FonteTituloPadrao}"></Label>
                                             <Label x:Name="Corpo" Text="{Binding CorpoReduzido}" VerticalOptions="End" Style="{StaticResource FontePadrao}" ></Label>
                                         </StackLayout>
                                     </Grid>

@@ -113,42 +113,6 @@ namespace SuperCore.Service
             
         }
 
-        public List<PessoaModel> ObtenhaPessoasCompleto()
-        {
-            var entidadepessoas = _pessoaRepository.ObtenhaTodos();
-            var entidadeenderecos = _enderecorepository.ObtenhaTodos();
-            var entidadeempresas = _empresarepository.ObtenhaTodos();
-            var entidadecoordenadas = _coordenadasRepository.ObtenhaTodos();
-            var pessoasModel = new List<PessoaModel>();
-
-            var objetosAnonimos = from pessoa in entidadepessoas
-                               join empresa in entidadeempresas on pessoa.Id equals empresa.Id
-                              join endereco in entidadeenderecos on pessoa.Id equals endereco.Id
-                              join coordenada in entidadecoordenadas on pessoa.Id equals coordenada.Id
-                              select new
-                              {
-                                  pessoa,
-                                  empresa,
-                                  endereco,
-                                  coordenada
-                              };
-            foreach (var objetoAnonimo in objetosAnonimos)
-            {
-                var pessoa = objetoAnonimo.pessoa;
-                var endereco = objetoAnonimo.endereco;
-                var coordenadas = objetoAnonimo.coordenada;
-                var empresa = objetoAnonimo.empresa;
-
-                var pessoaModel = pessoa.Adapt<PessoaModel>();
-                pessoaModel.Empresa = empresa.Adapt<companyModel>();
-                var geo = endereco.Adapt<addressModel>();
-                geo.Localizacao = coordenadas.Adapt<GeoModel>();
-                pessoaModel.Endereco = geo;
-                pessoasModel.Add(pessoaModel);
-            }
-            return pessoasModel;
-        }
-
         public PessoaModel ObtenhaPessoasPeloId(int id)
         {
             var entidadePessoa = _pessoaRepository.ObtenhaPeloId(id);

@@ -16,14 +16,6 @@ namespace Dominio.Models
         [JsonProperty("title")]
         public string Titulo { get; set; }
 
-        public string TituloReduzido
-        {
-            get
-            {
-                return Corpo.Substring(0, 20) + "...";
-            }
-        }
-
 
         [JsonProperty("body")]
         public string Corpo { get; set; }

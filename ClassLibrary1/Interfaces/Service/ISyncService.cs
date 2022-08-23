@@ -10,7 +10,6 @@ namespace SuperCore.Interfaces.Service
     {
         void SyncDados();
         List<PessoaModel> ObtenhaPessoas();
-        List<PessoaModel> ObtenhaPessoasCompleto();
         PessoaModel ObtenhaPessoasPeloId(int id);
         IList<PostModel> ObtenhaPosts();
         IList<PostModel> ObtenhaPostsDoUsuario(int idUsuario);

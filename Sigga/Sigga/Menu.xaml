@@ -11,18 +11,8 @@
         </Grid>
     </Shell.FlyoutHeader>
     <FlyoutItem Title="Novidades" FlyoutDisplayOptions="AsMultipleItems" Style="{StaticResource estyloFlyout}">
-        <ShellContent Title="Posts" ContentTemplate="{DataTemplate views:ViewPostsPosts}">
-            <ShellContent.Icon>
-                <FontImageSource
-                Glyph=""
-                Color="Blue"
-                Size="24">
-                </FontImageSource>
-            </ShellContent.Icon>
-        </ShellContent>
+        <ShellContent Title="Posts" ContentTemplate="{DataTemplate views:ViewPostsPosts}"></ShellContent>
         <ShellContent Title="Usuarios" ContentTemplate="{DataTemplate views:ListaUsuariosPage}"></ShellContent>
     </FlyoutItem>
-         <ShellContent Title="Sobre" 
-                      ContentTemplate="{DataTemplate views:SobrePage}"></ShellContent>
-    
+    <ShellContent Title="Sobre" ContentTemplate="{DataTemplate views:SobrePage}"></ShellContent>
 </Shell>

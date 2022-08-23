@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels ="clr-namespace:Sigga.ViewModels"
+             x:Name="PostsPage"
+             x:Class="Sigga.Views.ViewPostsPosts">
+    <ContentPage.BindingContext>
+        <viewModels:ViewModelPosts></viewModels:ViewModelPosts>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RefreshView IsRefreshing="{Binding EstaOcupado}"
+             Command="{Binding RefreshCommand}">
+            <ScrollView>
+                <CollectionView ItemsSource="{Binding Itens}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <Frame BorderColor="Black" Margin="2,1" CornerRadius="5">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference PostsPage}, Path=BindingContext.AbraPostSelecionado }" CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid ColumnDefinitions="1*,5*" RowDefinitions="*" HeightRequest="100">
+                                        <StackLayout>
+                                            <Image Grid.Column="0" Source="{Binding ImagemUsuario}" HeightRequest="60" VerticalOptions="CenterAndExpand"></Image>
+                                            <Label Text="{Binding NomeUsuario}" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"></Label>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1" VerticalOptions="Start">
+                                            <Label x:Name="Titulo" Text="{Binding TituloReduzido}" VerticalOptions="Start" Style="{StaticResource FonteTituloPadrao}"></Label>
+                                            <Label x:Name="Corpo" Text="{Binding CorpoReduzido}" VerticalOptions="End" Style="{StaticResource FontePadrao}" ></Label>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ContentView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

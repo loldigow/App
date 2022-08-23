@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Sigga.Views"
+             x:Class="Sigga.Menu">
+    <Shell.FlyoutHeader >
+        <Grid ColumnDefinitions="1*,2*" RowDefinitions="Auto, Auto" BackgroundColor="{StaticResource CinzaClaro}" Padding="10, 20">
+            <Image Source="image" Grid.RowSpan="2" HorizontalOptions="End"></Image>
+            <Label Text="Sigga Sistemas" Style="{StaticResource MenuHeaderLabel}" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"></Label>
+            <Label Text="Seja Bem vindo" Style="{StaticResource MenuHeaderDownLabel}" Grid.Column="1" HorizontalOptions="Start" Grid.Row="1"></Label>
+        </Grid>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Novidades" FlyoutDisplayOptions="AsMultipleItems" Style="{StaticResource estyloFlyout}">
+        <ShellContent Title="Posts" ContentTemplate="{DataTemplate views:ViewPostsPosts}">
+            <ShellContent.Icon>
+                <FontImageSource
+                Glyph=""
+                Color="Blue"
+                Size="24">
+                </FontImageSource>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Usuarios" ContentTemplate="{DataTemplate views:ListaUsuariosPage}"></ShellContent>
+    </FlyoutItem>
+         <ShellContent Title="Sobre" 
+                      ContentTemplate="{DataTemplate views:SobrePage}"></ShellContent>
+    
+</Shell>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sigga.Views.SobrePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Rodrigo Ferreira de Almeida Wallauer!"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" Style="{StaticResource FonteTituloPadrao}"/>
+            <Label Text="(062) 99274-6213"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" Style="{StaticResource FonteTituloPadrao}"/>
+            <Label Text="Aplicativo Teste SIGGA Sistemas"
+                VerticalOptions="End" 
+                HorizontalOptions="CenterAndExpand" Style="{StaticResource FonteTituloPadrao}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

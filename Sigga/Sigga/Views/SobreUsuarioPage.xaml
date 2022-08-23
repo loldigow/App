@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels ="clr-namespace:Sigga.ViewModels"
+             x:Class="Sigga.Views.SobreUsuarioPage">
+    <ContentPage.BindingContext>
+        <viewModels:SobreUsuarioViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout >
+                <Frame Padding="10">
+                    <StackLayout>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Nome}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Email}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Contato}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.WebSite}"></Label>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Endereço" Style="{StaticResource FonteTituloPadrao}"></Label>
+                <Frame Padding="10">
+                    <StackLayout>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Endereco.Rua}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Endereco.CEP}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Endereco.Cidade}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Endereco.Quarto}"></Label>
+                    </StackLayout>
+                </Frame>
+                <Frame Padding="10">
+                    <StackLayout>
+                        <Label Text="Localização" Style="{StaticResource FonteTituloPadrao}"></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Endereco.Localizacao.Latitude}"></Label>
+                            <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Endereco.Localizacao.Longitude}"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Padding="10">
+                    <StackLayout>
+                        <Label Text="Funcionario da Empresa " Style="{StaticResource FonteTituloPadrao}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Empresa.NomeEmresa}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Empresa.CatchPhrase}"></Label>
+                        <Label Style="{StaticResource FontePadrao}" Text="{Binding PessoaModel.Empresa.BS}"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

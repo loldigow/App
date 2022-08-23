@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sigga.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Branco">#FFFFFF</Color>
+            <Color x:Key="Preto">#000</Color>
+            <Color x:Key="CinzaClaro">#bdbebd</Color>
+
+            <Style TargetType="Element" x:Key="EstyloBase">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource CinzaClaro}"></Setter>
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource Preto}"></Setter>
+                <Setter Property="Shell.TitleColor" Value="{StaticResource Preto}"></Setter>
+                <Setter Property="Shell.UnselectedColor" Value="{StaticResource Branco}"></Setter>
+            </Style>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource EstyloBase}" x:Key="estyloFlyout"></Style>
+            <Style TargetType="ShellContent" BasedOn="{StaticResource EstyloBase}"></Style>
+            <Style TargetType="Label" x:Key="MenuHeaderLabel">
+                <Setter Property="FontFamily" Value="MontserraBold"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="{StaticResource Preto}"></Setter>
+            </Style>
+
+            <Style TargetType="Label" x:Key="FontePadrao">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="{StaticResource Preto}"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="FonteTituloPadrao">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{StaticResource Preto}"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="MenuHeaderDownLabel">
+                <Setter Property="FontFamily" Value="MontserraBold"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{StaticResource Branco}"></Setter>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

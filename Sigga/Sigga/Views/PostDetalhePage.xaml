@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels ="clr-namespace:Sigga.ViewModels"
+             x:Class="Sigga.Views.PostDetalhePage">
+    <ContentPage.BindingContext>
+        <viewModels:ViewModelPost/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding Post.ImagemUsuario}" HeightRequest="150" HorizontalOptions="CenterAndExpand"></Image>
+            <Label Text="{Binding Post.NomeUsuario}" Style="{StaticResource FonteTituloPadrao}" HorizontalOptions="CenterAndExpand"></Label>
+            <Frame>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="{Binding Post.Titulo}" Style="{StaticResource FonteTituloPadrao}"></Label>
+                    </StackLayout>
+                    <StackLayout >
+                        <Frame>
+                            <Label Text="{Binding Post.Corpo}" Style="{StaticResource FontePadrao}"></Label>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+<!--<StackLayout>
+    <Image Source="{Binding Post.ImagemUsuario}" HorizontalOptions="CenterAndExpand"></Image>
+    <Frame>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{Binding Post.Titulo}" Style="{StaticResource FonteTituloPadrao}"></Label>
+            </StackLayout>
+            <StackLayout >
+                <Frame>
+                    <Label Text="{Binding Post.Corpo}" Style="{StaticResource FontePadrao}"></Label>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</StackLayout>-->
